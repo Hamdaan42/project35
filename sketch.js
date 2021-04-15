@@ -10,7 +10,7 @@ function setup() {
   database=firebase.database
   createCanvas(800,400);
   balloon = createSprite(400, 200, 50, 50);
-  Ballon.image = "Hot Air Ballon-02.png"
+  balloon.addImage(this.image)
   var positionpath = database.ref('ballon')
     positionpath.on("value",readposition,showerror)
 
